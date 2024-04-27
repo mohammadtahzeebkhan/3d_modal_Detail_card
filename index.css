@@ -1,0 +1,180 @@
+body {
+    font-family: Poppins;
+    padding: 0 20px;
+  }
+  
+  .hr-line {
+    border-top: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, White, DimGrey, White) border-box;
+  }
+  
+  p {
+    font-weight: 200;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Simple loader indicating status while 3d model is loading */
+  
+  .loader {
+    position: absolute;
+    width: 250px; 
+    height: 250px; 
+    margin: 0;
+    padding: 0;
+    top: 10px;
+    left: 15px;
+    background-color: transparent; 
+    border: 4px dashed Dodgerblue; 
+    border-radius: 50%; 
+    font-weight: bold; 
+    color: DodgerBlue; 
+    text-align: center;
+  }
+  
+  .loader-dark {
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background-color: transparent; 
+    border: 4px dashed DimGrey; 
+    border-radius: 10%; 
+    font-weight: bold; 
+    color: DimGrey; 
+    text-align: center;
+    transform: scale(.95);
+  }
+  
+  sl-spinner {
+    font-size: 2.5rem; 
+    --indicator-color: DodgerBlue; 
+    --track-width: 4px;
+  }
+  
+  .spinner-dark {
+    font-size: 2rem; 
+    --indicator-color: DimGrey; 
+    --track-width: 4px;
+  }
+  
+  /* --- Card CSS --- */
+  
+  .card-3d {
+    min-width: 280px;
+    max-width: 860px;
+    margin: 0 auto;
+      background-image: radial-gradient(#404040, black);
+    border: 1px solid WhiteSmoke;
+    outline: 8px solid black;
+    border-radius: 15px; 
+    box-shadow: 0 15px 15px LightGrey;
+  }
+  
+  .card-3d-body {
+    padding: 30px 15px 30px 15px;
+    color: Whitesmoke;
+  }
+  
+  .card-3d-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  
+  .object-3d {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    padding: 0;
+  }
+  
+  .webgl {
+    position: relative;
+    transition: all;
+    cursor: grab;
+  }
+  
+  #webgl-1 {
+   filter: drop-shadow(0px 30px 20px Black);
+  }
+  
+  #webgl-2 {
+   filter: drop-shadow(0px 60px 25px Black);
+  }
+  
+  #webgl-3 {
+   filter: drop-shadow(0px 50px 35px Black);
+  }
+  
+  #webgl-4 {
+   filter: drop-shadow(0px 50px 35px Black);
+  }
+  
+  dotlottie-player {
+    position: relative;
+    display: inline-block;
+    top: 12px;
+    width: 35px;
+    height: 35px;
+    filter: brightness(80%);
+  }
+  
+  .responsive {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .animate {
+    animation: animate 3s ease-in-out;
+  }
+  
+  @keyframes animate {
+    from { 
+    transform: scale(0); opacity: 0;
+    }
+    to { 
+    transform: scale(1); opacity: 100%;
+    }
+  }
+  
+  /* Quick fix to make loader and model smaller on mobile so that there is space on the side for scrolling down*/
+  
+  @media screen and (max-width: 383px) {
+    .card-3d-title {
+    margin-top: 20px;
+    text-align: center;
+    }
+    #webgl-1 {
+    width: 180px !important;
+    height: 180px !important;
+    }
+    #webgl-2 {
+    width: 200px !important;
+    height: 200px !important;
+    }
+    #webgl-3 {
+    width: 200px !important;
+    height: 200px !important;
+    }
+    #webgl-4 {
+    width: 200px !important;
+    height: 200px !important;
+    }
+    .object-3d {
+    width: 180px !important;
+    height: 180px !important;
+    }
+    .loader {
+    width: 180px !important;
+    height: 180px !important;
+    top: -2px;
+    left: 2px;
+    }
+  }
+   
